@@ -1,0 +1,86 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Grid: System 10
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+@charset 'utf-8';
+
+// Create
+// ==================================================================================================
+// Grid system
+// ------------------------------------------------
+// Mobile
+@media (min-width: $screen-mobile-xs) {
+  @include make-grid(10, $abbreviation-mobile, $abbreviation-extra-small);
+}
+
+@media (min-width: $screen-mobile-sm) {
+  @include make-grid(10, $abbreviation-mobile, $abbreviation-small);
+}
+
+@media (min-width: $screen-mobile-md) {
+  @include make-grid(10, $abbreviation-mobile, $abbreviation-medium);
+}
+
+@media (min-width: $screen-mobile-lg) {
+  @include make-grid(10, $abbreviation-mobile, $abbreviation-large);
+}
+
+// Phablet
+@media (min-width: $screen-phablet-xs) {
+  @include make-grid(10, $abbreviation-phablet, $abbreviation-extra-small);
+}
+
+@media (min-width: $screen-phablet-sm) {
+  @include make-grid(10, $abbreviation-phablet, $abbreviation-small);
+}
+
+@media (min-width: $screen-phablet-md) {
+  @include make-grid(10, $abbreviation-phablet, $abbreviation-medium);
+}
+
+@media (min-width: $screen-phablet-lg) {
+  @include make-grid(10, $abbreviation-phablet, $abbreviation-large);
+}
+
+// Tablet
+@media (min-width: $screen-tablet-sm) {
+  @include make-grid(10, $abbreviation-tablet, $abbreviation-small);
+}
+
+@media (min-width: $screen-tablet-md) {
+  @include make-grid(10, $abbreviation-tablet, $abbreviation-medium);
+}
+
+@media (min-width: $screen-tablet-lg) {
+  @include make-grid(10, $abbreviation-tablet, $abbreviation-large);
+}
+
+// Labtop
+@media (min-width: $screen-labtop-sm) {
+  @include make-grid(10, $abbreviation-labtop, $abbreviation-small);
+}
+
+@media (min-width: $screen-labtop-md) {
+  @include make-grid(10, $abbreviation-labtop, $abbreviation-medium);
+}
+
+@media (min-width: $screen-labtop-lg) {
+  @include make-grid(10, $abbreviation-labtop, $abbreviation-large);
+}
+
+// Desktop
+@media (min-width: $screen-desktop-sm) {
+  @include make-grid(10, $abbreviation-desktop, $abbreviation-small);
+}
+
+@media (min-width: $screen-desktop-md) {
+  @include make-grid(10, $abbreviation-desktop, $abbreviation-medium);
+}
+
+@media (min-width: $screen-desktop-lg) {
+  @include make-grid(10, $abbreviation-desktop, $abbreviation-large);
+}

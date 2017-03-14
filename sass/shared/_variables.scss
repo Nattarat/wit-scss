@@ -1,0 +1,92 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Variables
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+@charset 'utf-8';
+
+// Variables
+// ==================================================================================================
+// Class name
+// ------------------------------------------------
+$prefix-binding: 'bind';
+$prefix-independent: 'indep';
+$prefix-unique: 'uniq';
+$prefix-visible: 'visible';
+$prefix-hidden: 'hidden';
+
+$abbreviation-extra-small: 'xs';
+$abbreviation-small: 'sm';
+$abbreviation-medium: 'md';
+$abbreviation-large: 'lg';
+
+$abbreviation-mobile: 'mob';
+$abbreviation-phablet: 'pha';
+$abbreviation-tablet: 'tab';
+$abbreviation-labtop: 'lab';
+$abbreviation-desktop: 'des';
+
+// Media queries breakpoints
+// ------------------------------------------------
+// Mobile (mob)
+$screen-mobile-xs: 320px;
+$screen-mobile-sm: 360px;
+$screen-mobile-md: 375px;
+$screen-mobile-lg: 411px;
+
+// Phablet (pha)
+$screen-phablet-xs: 480px;
+$screen-phablet-sm: 540px;
+$screen-phablet-md: 640px;
+$screen-phablet-lg: 731px;
+
+// Tablet (tab)
+$screen-tablet-sm: 768px;
+$screen-tablet-md: 960px;
+$screen-tablet-lg: 1024px;
+
+// Laptop (lab)
+$screen-labtop-sm: 1280px;
+$screen-labtop-md: 1366px;
+$screen-labtop-lg: 1440px;
+
+// Desktop (des)
+$screen-desktop-sm: 1600px;
+$screen-desktop-md: 1920px;
+$screen-desktop-lg: 2560px;
+
+// Screen max
+$screen-mobile-xs-max: ($screen-mobile-sm - 1);
+$screen-mobile-sm-max: ($screen-mobile-md - 1);
+$screen-mobile-md-max: ($screen-mobile-lg - 1);
+$screen-mobile-lg-max: ($screen-phablet-xs - 1);
+
+$screen-phablet-xs-max: ($screen-phablet-sm - 1);
+$screen-phablet-sm-max: ($screen-phablet-md - 1);
+$screen-phablet-md-max: ($screen-phablet-lg - 1);
+$screen-phablet-lg-max: ($screen-tablet-sm - 1);
+
+$screen-tablet-sm-max: ($screen-tablet-md - 1);
+$screen-tablet-md-max: ($screen-tablet-lg - 1);
+$screen-tablet-lg-max: ($screen-labtop-sm - 1);
+
+$screen-labtop-sm-max: ($screen-labtop-md - 1);
+$screen-labtop-md-max: ($screen-labtop-lg - 1);
+$screen-labtop-lg-max: ($screen-desktop-sm - 1);
+
+$screen-desktop-sm-max: ($screen-desktop-md - 1);
+$screen-desktop-md-max: ($screen-desktop-lg - 1);
+
+// Grid
+// ------------------------------------------------
+$grid-system-10: 10;
+$grid-system-12: 12;
+$grid-system-24: 24;
+
+$grid-gutter-base: 20px;
+$grid-gutter-small: floor($grid-gutter-base / 2);
+$grid-gutter-medium: $grid-gutter-base;
+$grid-gutter-large: floor($grid-gutter-base * 1.5);

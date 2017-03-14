@@ -1,0 +1,140 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Grid: Mixins
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+@charset 'utf-8';
+
+// Mixins
+// ==================================================================================================
+// Container
+// ------------------------------------------------
+@mixin container-fixed {
+  @include clearfix;
+
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// Make conatainer gutter
+// ------------------------------------------------
+@mixin make-container-gutter($class-screen, $class-screen-size, $class-gutter-size, $grid-gutter) {
+  &.#{$prefix-binding}-gutter-#{$class-gutter-size}-#{$class-screen}-#{$class-screen-size} {
+    padding-left:  $grid-gutter;
+    padding-right:  $grid-gutter;
+  }
+}
+
+// Make grid gutter
+// ------------------------------------------------
+@mixin make-grid-row($class-screen-size, $grid-gutter) {
+  &.#{$prefix-binding}-gutter-#{$class-screen-size} {
+    margin-left: ($grid-gutter * -1);
+  }
+}
+
+// Make grid gutter
+// ------------------------------------------------
+@mixin make-grid-gutter($class-screen-size, $grid-gutter) {
+  .grid {
+    &[class*='#{$prefix-binding}-system'] {
+      &.#{$prefix-binding}-gutter-#{$class-screen-size} {
+        > .grid-col {
+          // Inner gutter via padding
+          padding-left:  $grid-gutter;
+        }
+      }
+    }
+  }
+}
+
+// Make grid gutter: responsive utility class
+// ------------------------------------------------
+@mixin make-grid-gutter-responsive-utility($class-screen, $class-screen-size, $class-gutter-size, $grid-gutter) {
+  .grid {
+    &[class*='#{$prefix-binding}-system'] {
+      &.#{$prefix-binding}-gutter-#{$class-gutter-size}-#{$class-screen}-#{$class-screen-size} {
+        margin-left: -$grid-gutter !important;
+
+        > .grid-col {
+          // Inner gutter via padding
+          padding-left:  $grid-gutter !important;
+        }
+      }
+    }
+  }
+}
+
+// Make grid
+// ------------------------------------------------
+@mixin calc-grid-column($index, $columns, $class-screen, $class-screen-size, $type) {
+  .grid {
+    &.#{$prefix-binding}-system-#{$columns} {
+      > .grid-col {
+        // Width
+        @if ($type == width) and ($index > 0) {
+          &.#{$prefix-binding}-#{$class-screen}-#{$class-screen-size}-#{$index} {
+            width: percentage(($index / $columns));
+          }
+        }
+
+        // Push
+        @if ($type == push) and ($index > 0) {
+          &.#{$prefix-binding}-#{$class-screen}-#{$class-screen-size}-push-#{$index} {
+            left: percentage(($index / $columns));
+          }
+        }
+
+        @if ($type == push) and ($index == 0) {
+          &.#{$prefix-binding}-#{$class-screen}-#{$class-screen-size}-push-clear {
+            left: auto;
+          }
+        }
+
+        // Pull
+        @if ($type == pull) and ($index > 0) {
+          &.#{$prefix-binding}-#{$class-screen}-#{$class-screen-size}-pull-#{$index} {
+            right: percentage(($index / $columns));
+          }
+        }
+
+        @if ($type == pull) and ($index == 0) {
+          &.#{$prefix-binding}-#{$class-screen}-#{$class-screen-size}-pull-clear {
+            right: auto;
+          }
+        }
+
+        // Offset
+        @if ($type == offset) and ($index > 0) {
+          &.#{$prefix-binding}-#{$class-screen}-#{$class-screen-size}-offset-#{$index} {
+            margin-left: percentage(($index / $columns));
+          }
+        }
+
+        @if ($type == offset) and ($index == 0) {
+          &.#{$prefix-binding}-#{$class-screen}-#{$class-screen-size}-offset-clear {
+            margin-left: 0%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Create grid loop
+@mixin loop-grid-columns($columns, $class-screen, $class-screen-size, $type) {
+  @for $index from 0 through $columns {
+    @include calc-grid-column($index, $columns, $class-screen, $class-screen-size, $type);
+  }
+}
+
+// Create grid for specific class
+@mixin make-grid($columns, $class-screen, $class-screen-size) {
+  @include loop-grid-columns($columns, $class-screen, $class-screen-size, width);
+  @include loop-grid-columns($columns, $class-screen, $class-screen-size, pull);
+  @include loop-grid-columns($columns, $class-screen, $class-screen-size, push);
+  @include loop-grid-columns($columns, $class-screen, $class-screen-size, offset);
+}

@@ -1,0 +1,595 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Utilities: responsive
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+@charset 'utf-8';
+
+@include responsive-invisibility('.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-mobile}-#{$abbreviation-extra-small}');
+@include responsive-invisibility('.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-mobile}-#{$abbreviation-small}');
+@include responsive-invisibility('.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-mobile}-#{$abbreviation-medium}');
+@include responsive-invisibility('.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-mobile}-#{$abbreviation-large}');
+@include responsive-invisibility('.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-phablet}-#{$abbreviation-extra-small}');
+@include responsive-invisibility('.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-phablet}-#{$abbreviation-small}');
+@include responsive-invisibility('.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-phablet}-#{$abbreviation-medium}');
+@include responsive-invisibility('.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-phablet}-#{$abbreviation-large}');
+@include responsive-invisibility('.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-tablet}-#{$abbreviation-small}');
+@include responsive-invisibility('.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-tablet}-#{$abbreviation-medium}');
+@include responsive-invisibility('.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-tablet}-#{$abbreviation-large}');
+@include responsive-invisibility('.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-labtop}-#{$abbreviation-small}');
+@include responsive-invisibility('.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-labtop}-#{$abbreviation-medium}');
+@include responsive-invisibility('.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-labtop}-#{$abbreviation-large}');
+@include responsive-invisibility('.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-desktop}-#{$abbreviation-small}');
+@include responsive-invisibility('.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-desktop}-#{$abbreviation-medium}');
+@include responsive-invisibility('.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-desktop}-#{$abbreviation-large}');
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-mobile}-#{$abbreviation-extra-small}-block,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-mobile}-#{$abbreviation-extra-small}-inline,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-mobile}-#{$abbreviation-extra-small}-inline-block,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-mobile}-#{$abbreviation-small}-block,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-mobile}-#{$abbreviation-small}-inline,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-mobile}-#{$abbreviation-small}-inline-block,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-mobile}-#{$abbreviation-medium}-block,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-mobile}-#{$abbreviation-medium}-inline,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-mobile}-#{$abbreviation-medium}-inline-block,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-mobile}-#{$abbreviation-large}-block,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-mobile}-#{$abbreviation-large}-inline,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-mobile}-#{$abbreviation-large}-inline-block,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-phablet}-#{$abbreviation-extra-small}-block,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-phablet}-#{$abbreviation-extra-small}-inline,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-phablet}-#{$abbreviation-extra-small}-inline-block,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-phablet}-#{$abbreviation-small}-block,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-phablet}-#{$abbreviation-small}-inline,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-phablet}-#{$abbreviation-small}-inline-block,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-phablet}-#{$abbreviation-medium}-block,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-phablet}-#{$abbreviation-medium}-inline,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-phablet}-#{$abbreviation-medium}-inline-block,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-phablet}-#{$abbreviation-large}-block,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-phablet}-#{$abbreviation-large}-inline,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-phablet}-#{$abbreviation-large}-inline-block,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-tablet}-#{$abbreviation-small}-block,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-tablet}-#{$abbreviation-small}-inline,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-tablet}-#{$abbreviation-small}-inline-block,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-tablet}-#{$abbreviation-medium}-block,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-tablet}-#{$abbreviation-medium}-inline,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-tablet}-#{$abbreviation-medium}-inline-block,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-tablet}-#{$abbreviation-large}-block,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-tablet}-#{$abbreviation-large}-inline,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-tablet}-#{$abbreviation-large}-inline-block,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-labtop}-#{$abbreviation-small}-block,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-labtop}-#{$abbreviation-small}-inline,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-labtop}-#{$abbreviation-small}-inline-block,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-labtop}-#{$abbreviation-medium}-block,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-labtop}-#{$abbreviation-medium}-inline,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-labtop}-#{$abbreviation-medium}-inline-block,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-labtop}-#{$abbreviation-large}-block,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-labtop}-#{$abbreviation-large}-inline,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-labtop}-#{$abbreviation-large}-inline-block,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-desktop}-#{$abbreviation-small}-block,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-desktop}-#{$abbreviation-small}-inline,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-desktop}-#{$abbreviation-small}-inline-block,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-desktop}-#{$abbreviation-medium}-block,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-desktop}-#{$abbreviation-medium}-inline,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-desktop}-#{$abbreviation-medium}-inline-block,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-desktop}-#{$abbreviation-large}-block,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-desktop}-#{$abbreviation-large}-inline,
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-desktop}-#{$abbreviation-large}-inline-block {
+  display: none !important;
+}
+
+// Visible
+// ==================================================================================================
+// Mobile: Extra small
+// ------------------------------------------------
+@media (max-width: $screen-mobile-xs-max) {
+  @include responsive-visibility('.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-mobile}-#{$abbreviation-extra-small}');
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-mobile}-#{$abbreviation-extra-small}-block {
+  @media (max-width: $screen-mobile-xs-max) {
+    display: block !important;
+  }
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-mobile}-#{$abbreviation-extra-small}-inline {
+  @media (max-width: $screen-mobile-xs-max) {
+    display: inline !important;
+  }
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-mobile}-#{$abbreviation-extra-small}-inline-block {
+  @media (max-width: $screen-mobile-xs-max) {
+    display: inline-block !important;
+  }
+}
+
+// Mobile: Small
+// ------------------------------------------------
+@media (min-width: $screen-mobile-sm) and (max-width: $screen-mobile-sm-max) {
+  @include responsive-visibility('.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-mobile}-#{$abbreviation-small}');
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-mobile}-#{$abbreviation-small}-block {
+  @media (min-width: $screen-mobile-sm) and (max-width: $screen-mobile-sm-max) {
+    display: block !important;
+  }
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-mobile}-#{$abbreviation-small}-inline {
+  @media (min-width: $screen-mobile-sm) and (max-width: $screen-mobile-sm-max) {
+    display: inline !important;
+  }
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-mobile}-#{$abbreviation-small}-inline-block {
+  @media (min-width: $screen-mobile-sm) and (max-width: $screen-mobile-sm-max) {
+    display: inline-block !important;
+  }
+}
+
+// Mobile: Medium
+// ------------------------------------------------
+@media (min-width: $screen-mobile-md) and (max-width: $screen-mobile-md-max) {
+  @include responsive-visibility('.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-mobile}-#{$abbreviation-medium}');
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-mobile}-#{$abbreviation-medium}-block {
+  @media (min-width: $screen-mobile-md) and (max-width: $screen-mobile-md-max) {
+    display: block !important;
+  }
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-mobile}-#{$abbreviation-medium}-inline {
+  @media (min-width: $screen-mobile-md) and (max-width: $screen-mobile-md-max) {
+    display: inline !important;
+  }
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-mobile}-#{$abbreviation-medium}-inline-block {
+  @media (min-width: $screen-mobile-md) and (max-width: $screen-mobile-md-max) {
+    display: inline-block !important;
+  }
+}
+
+// Mobile: Large
+// ------------------------------------------------
+@media (min-width: $screen-mobile-lg) and (max-width: $screen-mobile-lg-max) {
+  @include responsive-visibility('.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-mobile}-#{$abbreviation-large}');
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-mobile}-#{$abbreviation-large}-block {
+  @media (min-width: $screen-mobile-lg) and (max-width: $screen-mobile-lg-max) {
+    display: block !important;
+  }
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-mobile}-#{$abbreviation-large}-inline {
+  @media (min-width: $screen-mobile-lg) and (max-width: $screen-mobile-lg-max) {
+    display: inline !important;
+  }
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-mobile}-#{$abbreviation-large}-inline-block {
+  @media (min-width: $screen-mobile-lg) and (max-width: $screen-mobile-lg-max) {
+    display: inline-block !important;
+  }
+}
+
+// Phablet: Extra small
+// ------------------------------------------------
+@media (min-width: $screen-phablet-xs) and (max-width: $screen-phablet-xs-max) {
+  @include responsive-visibility('.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-phablet}-#{$abbreviation-extra-small}');
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-phablet}-#{$abbreviation-extra-small}-block {
+  @media (min-width: $screen-phablet-xs) and (max-width: $screen-phablet-xs-max) {
+    display: block !important;
+  }
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-phablet}-#{$abbreviation-extra-small}-inline {
+  @media (min-width: $screen-phablet-xs) and (max-width: $screen-phablet-xs-max) {
+    display: inline !important;
+  }
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-phablet}-#{$abbreviation-extra-small}-inline-block {
+  @media (min-width: $screen-phablet-xs) and (max-width: $screen-phablet-xs-max) {
+    display: inline-block !important;
+  }
+}
+
+// Phablet: Small
+// ------------------------------------------------
+@media (min-width: $screen-phablet-sm) and (max-width: $screen-phablet-sm-max) {
+  @include responsive-visibility('.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-phablet}-#{$abbreviation-small}');
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-phablet}-#{$abbreviation-small}-block {
+  @media (min-width: $screen-phablet-sm) and (max-width: $screen-phablet-sm-max) {
+    display: block !important;
+  }
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-phablet}-#{$abbreviation-small}-inline {
+  @media (min-width: $screen-phablet-sm) and (max-width: $screen-phablet-sm-max) {
+    display: inline !important;
+  }
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-phablet}-#{$abbreviation-small}-inline-block {
+  @media (min-width: $screen-phablet-sm) and (max-width: $screen-phablet-sm-max) {
+    display: inline-block !important;
+  }
+}
+
+// Phablet: Medium
+// ------------------------------------------------
+@media (min-width: $screen-phablet-md) and (max-width: $screen-phablet-md-max) {
+  @include responsive-visibility('.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-phablet}-#{$abbreviation-medium}');
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-phablet}-#{$abbreviation-medium}-block {
+  @media (min-width: $screen-phablet-md) and (max-width: $screen-phablet-md-max) {
+    display: block !important;
+  }
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-phablet}-#{$abbreviation-medium}-inline {
+  @media (min-width: $screen-phablet-md) and (max-width: $screen-phablet-md-max) {
+    display: inline !important;
+  }
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-phablet}-#{$abbreviation-medium}-inline-block {
+  @media (min-width: $screen-phablet-md) and (max-width: $screen-phablet-md-max) {
+    display: inline-block !important;
+  }
+}
+
+// Phablet: Large
+// ------------------------------------------------
+@media (min-width: $screen-phablet-lg) and (max-width: $screen-phablet-lg-max) {
+  @include responsive-visibility('.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-phablet}-#{$abbreviation-large}');
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-phablet}-#{$abbreviation-large}-block {
+  @media (min-width: $screen-phablet-lg) and (max-width: $screen-phablet-lg-max) {
+    display: block !important;
+  }
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-phablet}-#{$abbreviation-large}-inline {
+  @media (min-width: $screen-phablet-lg) and (max-width: $screen-phablet-lg-max) {
+    display: inline !important;
+  }
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-phablet}-#{$abbreviation-large}-inline-block {
+  @media (min-width: $screen-phablet-lg) and (max-width: $screen-phablet-lg-max) {
+    display: inline-block !important;
+  }
+}
+
+// Tablet: Small
+// ------------------------------------------------
+@media (min-width: $screen-tablet-sm) and (max-width: $screen-tablet-sm-max) {
+  @include responsive-visibility('.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-tablet}-#{$abbreviation-small}');
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-tablet}-#{$abbreviation-small}-block {
+  @media (min-width: $screen-tablet-sm) and (max-width: $screen-tablet-sm-max) {
+    display: block !important;
+  }
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-tablet}-#{$abbreviation-small}-inline {
+  @media (min-width: $screen-tablet-sm) and (max-width: $screen-tablet-sm-max) {
+    display: inline !important;
+  }
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-tablet}-#{$abbreviation-small}-inline-block {
+  @media (min-width: $screen-tablet-sm) and (max-width: $screen-tablet-sm-max) {
+    display: inline-block !important;
+  }
+}
+
+// Tablet: Medium
+// ------------------------------------------------
+@media (min-width: $screen-tablet-md) and (max-width: $screen-tablet-md-max) {
+  @include responsive-visibility('.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-tablet}-#{$abbreviation-medium}');
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-tablet}-#{$abbreviation-medium}-block {
+  @media (min-width: $screen-tablet-md) and (max-width: $screen-tablet-md-max) {
+    display: block !important;
+  }
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-tablet}-#{$abbreviation-medium}-inline {
+  @media (min-width: $screen-tablet-md) and (max-width: $screen-tablet-md-max) {
+    display: inline !important;
+  }
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-tablet}-#{$abbreviation-medium}-inline-block {
+  @media (min-width: $screen-tablet-md) and (max-width: $screen-tablet-md-max) {
+    display: inline-block !important;
+  }
+}
+
+// Tablet: Large
+// ------------------------------------------------
+@media (min-width: $screen-tablet-lg) and (max-width: $screen-tablet-lg-max) {
+  @include responsive-visibility('.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-tablet}-#{$abbreviation-large}');
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-tablet}-#{$abbreviation-large}-block {
+  @media (min-width: $screen-tablet-lg) and (max-width: $screen-tablet-lg-max) {
+    display: block !important;
+  }
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-tablet}-#{$abbreviation-large}-inline {
+  @media (min-width: $screen-tablet-lg) and (max-width: $screen-tablet-lg-max) {
+    display: inline !important;
+  }
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-tablet}-#{$abbreviation-large}-inline-block {
+  @media (min-width: $screen-tablet-lg) and (max-width: $screen-tablet-lg-max) {
+    display: inline-block !important;
+  }
+}
+
+// Labtop: Small
+// ------------------------------------------------
+@media (min-width: $screen-labtop-sm) and (max-width: $screen-labtop-sm-max) {
+  @include responsive-visibility('.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-labtop}-#{$abbreviation-small}');
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-labtop}-#{$abbreviation-small}-block {
+  @media (min-width: $screen-labtop-sm) and (max-width: $screen-labtop-sm-max) {
+    display: block !important;
+  }
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-labtop}-#{$abbreviation-small}-inline {
+  @media (min-width: $screen-labtop-sm) and (max-width: $screen-labtop-sm-max) {
+    display: inline !important;
+  }
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-labtop}-#{$abbreviation-small}-inline-block {
+  @media (min-width: $screen-labtop-sm) and (max-width: $screen-labtop-sm-max) {
+    display: inline-block !important;
+  }
+}
+
+// Labtop: Medium
+// ------------------------------------------------
+@media (min-width: $screen-labtop-md) and (max-width: $screen-labtop-md-max) {
+  @include responsive-visibility('.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-labtop}-#{$abbreviation-medium}');
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-labtop}-#{$abbreviation-medium}-block {
+  @media (min-width: $screen-labtop-md) and (max-width: $screen-labtop-md-max) {
+    display: block !important;
+  }
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-labtop}-#{$abbreviation-medium}-inline {
+  @media (min-width: $screen-labtop-md) and (max-width: $screen-labtop-md-max) {
+    display: inline !important;
+  }
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-labtop}-#{$abbreviation-medium}-inline-block {
+  @media (min-width: $screen-labtop-md) and (max-width: $screen-labtop-md-max) {
+    display: inline-block !important;
+  }
+}
+
+// Labtop: Large
+// ------------------------------------------------
+@media (min-width: $screen-labtop-lg) and (max-width: $screen-labtop-lg-max) {
+  @include responsive-visibility('.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-labtop}-#{$abbreviation-large}');
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-labtop}-#{$abbreviation-large}-block {
+  @media (min-width: $screen-labtop-lg) and (max-width: $screen-labtop-lg-max) {
+    display: block !important;
+  }
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-labtop}-#{$abbreviation-large}-inline {
+  @media (min-width: $screen-labtop-lg) and (max-width: $screen-labtop-lg-max) {
+    display: inline !important;
+  }
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-labtop}-#{$abbreviation-large}-inline-block {
+  @media (min-width: $screen-labtop-lg) and (max-width: $screen-labtop-lg-max) {
+    display: inline-block !important;
+  }
+}
+
+// Desktop: Small
+// ------------------------------------------------
+@media (min-width: $screen-desktop-sm) and (max-width: $screen-desktop-sm-max) {
+  @include responsive-visibility('.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-desktop}-#{$abbreviation-small}');
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-desktop}-#{$abbreviation-small}-block {
+  @media (min-width: $screen-desktop-sm) and (max-width: $screen-desktop-sm-max) {
+    display: block !important;
+  }
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-desktop}-#{$abbreviation-small}-inline {
+  @media (min-width: $screen-desktop-sm) and (max-width: $screen-desktop-sm-max) {
+    display: inline !important;
+  }
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-desktop}-#{$abbreviation-small}-inline-block {
+  @media (min-width: $screen-desktop-sm) and (max-width: $screen-desktop-sm-max) {
+    display: inline-block !important;
+  }
+}
+
+// Desktop: Medium
+// ------------------------------------------------
+@media (min-width: $screen-desktop-md) and (max-width: $screen-desktop-md-max) {
+  @include responsive-visibility('.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-desktop}-#{$abbreviation-medium}');
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-desktop}-#{$abbreviation-medium}-block {
+  @media (min-width: $screen-desktop-md) and (max-width: $screen-desktop-md-max) {
+    display: block !important;
+  }
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-desktop}-#{$abbreviation-medium}-inline {
+  @media (min-width: $screen-desktop-md) and (max-width: $screen-desktop-md-max) {
+    display: inline !important;
+  }
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-desktop}-#{$abbreviation-medium}-inline-block {
+  @media (min-width: $screen-desktop-md) and (max-width: $screen-desktop-md-max) {
+    display: inline-block !important;
+  }
+}
+
+// Desktop: Large
+// ------------------------------------------------
+@media (min-width: $screen-desktop-lg) {
+  @include responsive-visibility('.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-desktop}-#{$abbreviation-large}');
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-desktop}-#{$abbreviation-large}-block {
+  @media (min-width: $screen-desktop-lg) {
+    display: block !important;
+  }
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-desktop}-#{$abbreviation-large}-inline {
+  @media (min-width: $screen-desktop-lg) {
+    display: inline !important;
+  }
+}
+
+.#{$prefix-independent}-#{$prefix-visible}-#{$abbreviation-desktop}-#{$abbreviation-large}-inline-block {
+  @media (min-width: $screen-desktop-lg) {
+    display: inline-block !important;
+  }
+}
+
+// Hidden
+// ==================================================================================================
+// Mobile: Extra small
+// ------------------------------------------------
+@media (max-width: $screen-mobile-xs-max) {
+  @include responsive-invisibility('.#{$prefix-independent}-#{$prefix-hidden}-#{$abbreviation-mobile}-#{$abbreviation-extra-small}');
+}
+
+// Mobile: Small
+// ------------------------------------------------
+@media (min-width: $screen-mobile-sm) and (max-width: $screen-mobile-sm-max) {
+  @include responsive-invisibility('.#{$prefix-independent}-#{$prefix-hidden}-#{$abbreviation-mobile}-#{$abbreviation-small}');
+}
+
+// Mobile: Medium
+// ------------------------------------------------
+@media (min-width: $screen-mobile-md) and (max-width: $screen-mobile-md-max) {
+  @include responsive-invisibility('.#{$prefix-independent}-#{$prefix-hidden}-#{$abbreviation-mobile}-#{$abbreviation-medium}');
+}
+
+// Mobile: Large
+// ------------------------------------------------
+@media (min-width: $screen-mobile-lg) and (max-width: $screen-mobile-lg-max) {
+  @include responsive-invisibility('.#{$prefix-independent}-#{$prefix-hidden}-#{$abbreviation-mobile}-#{$abbreviation-large}');
+}
+
+// Phablet: Extra small
+// ------------------------------------------------
+@media (min-width: $screen-phablet-xs) and (max-width: $screen-phablet-xs-max) {
+  @include responsive-invisibility('.#{$prefix-independent}-#{$prefix-hidden}-#{$abbreviation-phablet}-#{$abbreviation-extra-small}');
+}
+
+// Phablet: Small
+// ------------------------------------------------
+@media (min-width: $screen-phablet-sm) and (max-width: $screen-phablet-sm-max) {
+  @include responsive-invisibility('.#{$prefix-independent}-#{$prefix-hidden}-#{$abbreviation-phablet}-#{$abbreviation-small}');
+}
+
+// Phablet: Medium
+// ------------------------------------------------
+@media (min-width: $screen-phablet-md) and (max-width: $screen-phablet-md-max) {
+  @include responsive-invisibility('.#{$prefix-independent}-#{$prefix-hidden}-#{$abbreviation-phablet}-#{$abbreviation-medium}');
+}
+
+// Phablet: Large
+// ------------------------------------------------
+@media (min-width: $screen-phablet-lg) and (max-width: $screen-phablet-lg-max) {
+  @include responsive-invisibility('.#{$prefix-independent}-#{$prefix-hidden}-#{$abbreviation-phablet}-#{$abbreviation-large}');
+}
+
+// Tablet: Small
+// ------------------------------------------------
+@media (min-width: $screen-tablet-sm) and (max-width: $screen-tablet-sm-max) {
+  @include responsive-invisibility('.#{$prefix-independent}-#{$prefix-hidden}-#{$abbreviation-tablet}-#{$abbreviation-small}');
+}
+
+// Tablet: Medium
+// ------------------------------------------------
+@media (min-width: $screen-tablet-md) and (max-width: $screen-tablet-md-max) {
+  @include responsive-invisibility('.#{$prefix-independent}-#{$prefix-hidden}-#{$abbreviation-tablet}-#{$abbreviation-medium}');
+}
+
+// Tablet: Large
+// ------------------------------------------------
+@media (min-width: $screen-tablet-lg) and (max-width: $screen-tablet-lg-max) {
+  @include responsive-invisibility('.#{$prefix-independent}-#{$prefix-hidden}-#{$abbreviation-tablet}-#{$abbreviation-large}');
+}
+
+// Labtop: Small
+// ------------------------------------------------
+@media (min-width: $screen-labtop-sm) and (max-width: $screen-labtop-sm-max) {
+  @include responsive-invisibility('.#{$prefix-independent}-#{$prefix-hidden}-#{$abbreviation-labtop}-#{$abbreviation-small}');
+}
+
+// Labtop: Medium
+// ------------------------------------------------
+@media (min-width: $screen-labtop-md) and (max-width: $screen-labtop-md-max) {
+  @include responsive-invisibility('.#{$prefix-independent}-#{$prefix-hidden}-#{$abbreviation-labtop}-#{$abbreviation-medium}');
+}
+
+// Labtop: Large
+// ------------------------------------------------
+@media (min-width: $screen-labtop-lg) and (max-width: $screen-labtop-lg-max) {
+  @include responsive-invisibility('.#{$prefix-independent}-#{$prefix-hidden}-#{$abbreviation-labtop}-#{$abbreviation-large}');
+}
+
+// Desktop: Small
+// ------------------------------------------------
+@media (min-width: $screen-desktop-sm) and (max-width: $screen-desktop-sm-max) {
+  @include responsive-invisibility('.#{$prefix-independent}-#{$prefix-hidden}-#{$abbreviation-desktop}-#{$abbreviation-small}');
+}
+
+// Desktop: Medium
+// ------------------------------------------------
+@media (min-width: $screen-desktop-md) and (max-width: $screen-desktop-md-max) {
+  @include responsive-invisibility('.#{$prefix-independent}-#{$prefix-hidden}-#{$abbreviation-desktop}-#{$abbreviation-medium}');
+}
+
+// Desktop: Large
+// ------------------------------------------------
+@media (min-width: $screen-desktop-lg) {
+  @include responsive-invisibility('.#{$prefix-independent}-#{$prefix-hidden}-#{$abbreviation-desktop}-#{$abbreviation-large}');
+}

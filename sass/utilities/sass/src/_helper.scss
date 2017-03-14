@@ -1,0 +1,151 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Utilities: helper
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+@charset 'utf-8';
+
+// Typography
+// ==================================================================================================
+// Alignment
+// ------------------------------------------------
+.#{$prefix-independent}-text-left {
+  text-align: left;
+}
+
+.#{$prefix-independent}-text-right {
+  text-align: right;
+}
+
+.#{$prefix-independent}-text-center {
+  text-align: center;
+}
+
+.#{$prefix-independent}-text-justify {
+  text-align: justify;
+}
+
+.#{$prefix-independent}-text-nowarp {
+  white-space: nowrap;
+}
+
+// Transformation
+// ------------------------------------------------
+.#{$prefix-independent}-text-capitalize {
+  text-transform: capitalize;
+}
+
+.#{$prefix-independent}-text-lowercase {
+  text-transform: lowercase;
+}
+
+.#{$prefix-independent}-text-uppercase {
+  text-transform: uppercase;
+}
+
+// Style
+// ------------------------------------------------
+.#{$prefix-independent}-text-normal {
+  font-style: normal;
+}
+
+.#{$prefix-independent}-text-italic {
+  font-style: italic;
+}
+
+.#{$prefix-independent}-text-bold {
+  font-weight: bold;
+}
+
+.#{$prefix-independent}-text-underline {
+  text-decoration: underline;
+}
+
+.#{$prefix-independent}-text-line-through {
+  text-decoration: line-through;
+}
+
+.#{$prefix-independent}-text-clear {
+  font-style: normal !important;
+  font-weight: normal !important;
+  text-decoration: none !important;
+}
+
+// Truncating
+// ------------------------------------------------
+.#{$prefix-independent}-text-truncating {
+  @include text-truncating;
+}
+
+// Image
+// ==================================================================================================
+// Responsive
+// ------------------------------------------------
+.#{$prefix-independent}-img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.#{$prefix-independent}-img-responsive-inline-block {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+// Shape
+// ------------------------------------------------
+.#{$prefix-independent}-img-circle {
+  border-radius: 50%;
+}
+
+// Float
+// ==================================================================================================
+// Float
+// ------------------------------------------------
+.#{$prefix-independent}-float-left {
+  float: left;
+}
+
+.#{$prefix-independent}-float-right {
+  float: right;
+}
+
+.#{$prefix-independent}-float-none {
+  float: none !important;
+}
+
+// Clear
+// ------------------------------------------------
+.#{$prefix-independent}-clear-float {
+  clear: both;
+}
+
+.#{$prefix-independent}-clear-float-parent {
+  &::before,
+  &::after {
+    content: ' ';
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+// Hidden
+// ==================================================================================================
+// Display
+// ------------------------------------------------
+.#{$prefix-independent}-hidden {
+  display: none !important;
+}
+
+// Visibility
+// ------------------------------------------------
+.#{$prefix-independent}-invisible {
+  visibility: hidden;
+}

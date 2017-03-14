@@ -1,0 +1,334 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Grid: Core style
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+@charset 'utf-8';
+
+// Create
+// ==================================================================================================
+// Container width (Website width)
+// ------------------------------------------------
+.container {
+  @include container-fixed;
+
+  // Width
+  @media (min-width: $screen-labtop-sm) {
+    width: $screen-labtop-sm;
+
+    &.#{$prefix-binding}-fluid {
+      width: auto;
+    }
+  }
+
+  @media (min-width: $screen-desktop-sm) {
+    width: $screen-labtop-lg;
+
+    &.#{$prefix-binding}-fluid {
+      width: auto;
+    }
+  }
+
+  @media (min-width: $screen-desktop-md) {
+    width: $screen-desktop-sm;
+
+    &.#{$prefix-binding}-fluid {
+      width: auto;
+    }
+  }
+
+  // Gutter
+  // Mobile
+  @media (min-width: $screen-mobile-xs) {
+    @include make-container-gutter($abbreviation-mobile, $abbreviation-extra-small, $abbreviation-small, $grid-gutter-small);
+    @include make-container-gutter($abbreviation-mobile, $abbreviation-extra-small, $abbreviation-medium, $grid-gutter-medium);
+    @include make-container-gutter($abbreviation-mobile, $abbreviation-extra-small, $abbreviation-large, $grid-gutter-large);
+    @include make-container-gutter($abbreviation-mobile, $abbreviation-extra-small, clear, 0);
+  }
+
+  @media (min-width: $screen-mobile-sm) {
+    @include make-container-gutter($abbreviation-mobile, $abbreviation-small, $abbreviation-small, $grid-gutter-small);
+    @include make-container-gutter($abbreviation-mobile, $abbreviation-small, $abbreviation-medium, $grid-gutter-medium);
+    @include make-container-gutter($abbreviation-mobile, $abbreviation-small, $abbreviation-large, $grid-gutter-large);
+    @include make-container-gutter($abbreviation-mobile, $abbreviation-small, clear, 0);
+  }
+
+  @media (min-width: $screen-mobile-md) {
+    @include make-container-gutter($abbreviation-mobile, $abbreviation-medium, $abbreviation-small, $grid-gutter-small);
+    @include make-container-gutter($abbreviation-mobile, $abbreviation-medium, $abbreviation-medium, $grid-gutter-medium);
+    @include make-container-gutter($abbreviation-mobile, $abbreviation-medium, $abbreviation-large, $grid-gutter-large);
+    @include make-container-gutter($abbreviation-mobile, $abbreviation-medium, clear, 0);
+  }
+
+  @media (min-width: $screen-mobile-lg) {
+    @include make-container-gutter($abbreviation-mobile, $abbreviation-large, $abbreviation-small, $grid-gutter-small);
+    @include make-container-gutter($abbreviation-mobile, $abbreviation-large, $abbreviation-medium, $grid-gutter-medium);
+    @include make-container-gutter($abbreviation-mobile, $abbreviation-large, $abbreviation-large, $grid-gutter-large);
+    @include make-container-gutter($abbreviation-mobile, $abbreviation-large, clear, 0);
+  }
+
+  // Phablet
+  @media (min-width: $screen-phablet-xs) {
+    @include make-container-gutter($abbreviation-phablet, $abbreviation-extra-small, $abbreviation-small, $grid-gutter-small);
+    @include make-container-gutter($abbreviation-phablet, $abbreviation-extra-small, $abbreviation-medium, $grid-gutter-medium);
+    @include make-container-gutter($abbreviation-phablet, $abbreviation-extra-small, $abbreviation-large, $grid-gutter-large);
+    @include make-container-gutter($abbreviation-phablet, $abbreviation-extra-small, clear, 0);
+  }
+
+  @media (min-width: $screen-phablet-sm) {
+    @include make-container-gutter($abbreviation-phablet, $abbreviation-small, $abbreviation-small, $grid-gutter-small);
+    @include make-container-gutter($abbreviation-phablet, $abbreviation-small, $abbreviation-medium, $grid-gutter-medium);
+    @include make-container-gutter($abbreviation-phablet, $abbreviation-small, $abbreviation-large, $grid-gutter-large);
+    @include make-container-gutter($abbreviation-phablet, $abbreviation-small, clear, 0);
+  }
+
+  @media (min-width: $screen-phablet-md) {
+    @include make-container-gutter($abbreviation-phablet, $abbreviation-medium, $abbreviation-small, $grid-gutter-small);
+    @include make-container-gutter($abbreviation-phablet, $abbreviation-medium, $abbreviation-medium, $grid-gutter-medium);
+    @include make-container-gutter($abbreviation-phablet, $abbreviation-medium, $abbreviation-large, $grid-gutter-large);
+    @include make-container-gutter($abbreviation-phablet, $abbreviation-medium, clear, 0);
+  }
+
+  @media (min-width: $screen-phablet-lg) {
+    @include make-container-gutter($abbreviation-phablet, $abbreviation-large, $abbreviation-small, $grid-gutter-small);
+    @include make-container-gutter($abbreviation-phablet, $abbreviation-large, $abbreviation-medium, $grid-gutter-medium);
+    @include make-container-gutter($abbreviation-phablet, $abbreviation-large, $abbreviation-large, $grid-gutter-large);
+    @include make-container-gutter($abbreviation-phablet, $abbreviation-large, clear, 0);
+  }
+
+  // Tablet
+  @media (min-width: $screen-tablet-sm) {
+    @include make-container-gutter($abbreviation-tablet, $abbreviation-small, $abbreviation-small, $grid-gutter-small);
+    @include make-container-gutter($abbreviation-tablet, $abbreviation-small, $abbreviation-medium, $grid-gutter-medium);
+    @include make-container-gutter($abbreviation-tablet, $abbreviation-small, $abbreviation-large, $grid-gutter-large);
+    @include make-container-gutter($abbreviation-tablet, $abbreviation-small, clear, 0);
+  }
+
+  @media (min-width: $screen-tablet-md) {
+    @include make-container-gutter($abbreviation-tablet, $abbreviation-medium, $abbreviation-small, $grid-gutter-small);
+    @include make-container-gutter($abbreviation-tablet, $abbreviation-medium, $abbreviation-medium, $grid-gutter-medium);
+    @include make-container-gutter($abbreviation-tablet, $abbreviation-medium, $abbreviation-large, $grid-gutter-large);
+    @include make-container-gutter($abbreviation-tablet, $abbreviation-medium, clear, 0);
+  }
+
+  @media (min-width: $screen-tablet-lg) {
+    @include make-container-gutter($abbreviation-tablet, $abbreviation-large, $abbreviation-small, $grid-gutter-small);
+    @include make-container-gutter($abbreviation-tablet, $abbreviation-large, $abbreviation-medium, $grid-gutter-medium);
+    @include make-container-gutter($abbreviation-tablet, $abbreviation-large, $abbreviation-large, $grid-gutter-large);
+    @include make-container-gutter($abbreviation-tablet, $abbreviation-large, clear, 0);
+  }
+
+  // Laptop + Desktop
+  @media (min-width: $screen-labtop-sm) {
+    @include make-container-gutter($abbreviation-mobile, $abbreviation-extra-small, $abbreviation-small, 0);
+    @include make-container-gutter($abbreviation-mobile, $abbreviation-extra-small, $abbreviation-medium, 0);
+    @include make-container-gutter($abbreviation-mobile, $abbreviation-extra-small, $abbreviation-large, 0);
+
+    @include make-container-gutter($abbreviation-mobile, $abbreviation-small, $abbreviation-small, 0);
+    @include make-container-gutter($abbreviation-mobile, $abbreviation-small, $abbreviation-medium, 0);
+    @include make-container-gutter($abbreviation-mobile, $abbreviation-small, $abbreviation-large, 0);
+
+    @include make-container-gutter($abbreviation-mobile, $abbreviation-medium, $abbreviation-small, 0);
+    @include make-container-gutter($abbreviation-mobile, $abbreviation-medium, $abbreviation-medium, 0);
+    @include make-container-gutter($abbreviation-mobile, $abbreviation-medium, $abbreviation-large, 0);
+
+    @include make-container-gutter($abbreviation-mobile, $abbreviation-large, $abbreviation-small, 0);
+    @include make-container-gutter($abbreviation-mobile, $abbreviation-large, $abbreviation-medium, 0);
+    @include make-container-gutter($abbreviation-mobile, $abbreviation-large, $abbreviation-large, 0);
+
+    @include make-container-gutter($abbreviation-phablet, $abbreviation-extra-small, $abbreviation-small, 0);
+    @include make-container-gutter($abbreviation-phablet, $abbreviation-extra-small, $abbreviation-medium, 0);
+    @include make-container-gutter($abbreviation-phablet, $abbreviation-extra-small, $abbreviation-large, 0);
+
+    @include make-container-gutter($abbreviation-phablet, $abbreviation-small, $abbreviation-small, 0);
+    @include make-container-gutter($abbreviation-phablet, $abbreviation-small, $abbreviation-medium, 0);
+    @include make-container-gutter($abbreviation-phablet, $abbreviation-small, $abbreviation-large, 0);
+
+    @include make-container-gutter($abbreviation-phablet, $abbreviation-medium, $abbreviation-small, 0);
+    @include make-container-gutter($abbreviation-phablet, $abbreviation-medium, $abbreviation-medium, 0);
+    @include make-container-gutter($abbreviation-phablet, $abbreviation-medium, $abbreviation-large, 0);
+
+    @include make-container-gutter($abbreviation-phablet, $abbreviation-large, $abbreviation-small, 0);
+    @include make-container-gutter($abbreviation-phablet, $abbreviation-large, $abbreviation-medium, 0);
+    @include make-container-gutter($abbreviation-phablet, $abbreviation-large, $abbreviation-large, 0);
+
+    @include make-container-gutter($abbreviation-tablet, $abbreviation-small, $abbreviation-small, 0);
+    @include make-container-gutter($abbreviation-tablet, $abbreviation-small, $abbreviation-medium, 0);
+    @include make-container-gutter($abbreviation-tablet, $abbreviation-small, $abbreviation-large, 0);
+
+    @include make-container-gutter($abbreviation-tablet, $abbreviation-medium, $abbreviation-small, 0);
+    @include make-container-gutter($abbreviation-tablet, $abbreviation-medium, $abbreviation-medium, 0);
+    @include make-container-gutter($abbreviation-tablet, $abbreviation-medium, $abbreviation-large, 0);
+
+    @include make-container-gutter($abbreviation-tablet, $abbreviation-large, $abbreviation-small, 0);
+    @include make-container-gutter($abbreviation-tablet, $abbreviation-large, $abbreviation-medium, 0);
+    @include make-container-gutter($abbreviation-tablet, $abbreviation-large, $abbreviation-large, 0);
+  }
+}
+
+// Grid row
+// ------------------------------------------------
+.grid {
+  @include make-grid-row($abbreviation-small, $grid-gutter-small);
+  @include make-grid-row($abbreviation-medium, $grid-gutter-medium);
+  @include make-grid-row($abbreviation-large, $grid-gutter-large);
+  @include clearfix;
+}
+
+// Grid column
+// ------------------------------------------------
+.grid {
+  > .grid-col {
+    position: relative;
+    float: left;
+    // Prevent columns from collapsing when empty
+    min-height: 1px;
+  }
+}
+
+// Grid gutter
+// ------------------------------------------------
+@include make-grid-gutter($abbreviation-small, $grid-gutter-small);
+@include make-grid-gutter($abbreviation-medium, $grid-gutter-medium);
+@include make-grid-gutter($abbreviation-large, $grid-gutter-large);
+
+// Grid gutter: responsive utility class
+// ------------------------------------------------
+// Mobile: Extra small
+@media (max-width: $screen-mobile-xs-max) {
+  @include make-grid-gutter-responsive-utility($abbreviation-mobile, $abbreviation-extra-small, $abbreviation-small, $grid-gutter-small);
+  @include make-grid-gutter-responsive-utility($abbreviation-mobile, $abbreviation-extra-small, $abbreviation-medium, $grid-gutter-medium);
+  @include make-grid-gutter-responsive-utility($abbreviation-mobile, $abbreviation-extra-small, $abbreviation-large, $grid-gutter-large);
+  @include make-grid-gutter-responsive-utility($abbreviation-mobile, $abbreviation-extra-small, clear, 0);
+}
+
+// Mobile: Small
+@media (min-width: $screen-mobile-sm) and (max-width: $screen-mobile-sm-max) {
+  @include make-grid-gutter-responsive-utility($abbreviation-mobile, $abbreviation-small, $abbreviation-small, $grid-gutter-small);
+  @include make-grid-gutter-responsive-utility($abbreviation-mobile, $abbreviation-small, $abbreviation-medium, $grid-gutter-medium);
+  @include make-grid-gutter-responsive-utility($abbreviation-mobile, $abbreviation-small, $abbreviation-large, $grid-gutter-large);
+  @include make-grid-gutter-responsive-utility($abbreviation-mobile, $abbreviation-small, clear, 0);
+}
+
+// Mobile: Medium
+@media (min-width: $screen-mobile-md) and (max-width: $screen-mobile-md-max) {
+  @include make-grid-gutter-responsive-utility($abbreviation-mobile, $abbreviation-medium, $abbreviation-small, $grid-gutter-small);
+  @include make-grid-gutter-responsive-utility($abbreviation-mobile, $abbreviation-medium, $abbreviation-medium, $grid-gutter-medium);
+  @include make-grid-gutter-responsive-utility($abbreviation-mobile, $abbreviation-medium, $abbreviation-large, $grid-gutter-large);
+  @include make-grid-gutter-responsive-utility($abbreviation-mobile, $abbreviation-medium, clear, 0);
+}
+
+// Mobile: Large
+@media (min-width: $screen-mobile-lg) and (max-width: $screen-mobile-lg-max) {
+  @include make-grid-gutter-responsive-utility($abbreviation-mobile, $abbreviation-large, $abbreviation-small, $grid-gutter-small);
+  @include make-grid-gutter-responsive-utility($abbreviation-mobile, $abbreviation-large, $abbreviation-medium, $grid-gutter-medium);
+  @include make-grid-gutter-responsive-utility($abbreviation-mobile, $abbreviation-large, $abbreviation-large, $grid-gutter-large);
+  @include make-grid-gutter-responsive-utility($abbreviation-mobile, $abbreviation-large, clear, 0);
+}
+
+// Phablet: Extra small
+@media (min-width: $screen-phablet-xs) and (max-width: $screen-phablet-xs-max) {
+  @include make-grid-gutter-responsive-utility($abbreviation-phablet, $abbreviation-extra-small, $abbreviation-small, $grid-gutter-small);
+  @include make-grid-gutter-responsive-utility($abbreviation-phablet, $abbreviation-extra-small, $abbreviation-medium, $grid-gutter-medium);
+  @include make-grid-gutter-responsive-utility($abbreviation-phablet, $abbreviation-extra-small, $abbreviation-large, $grid-gutter-large);
+  @include make-grid-gutter-responsive-utility($abbreviation-phablet, $abbreviation-extra-small, clear, 0);
+}
+
+// Phablet: Small
+@media (min-width: $screen-phablet-sm) and (max-width: $screen-phablet-sm-max) {
+  @include make-grid-gutter-responsive-utility($abbreviation-phablet, $abbreviation-small, $abbreviation-small, $grid-gutter-small);
+  @include make-grid-gutter-responsive-utility($abbreviation-phablet, $abbreviation-small, $abbreviation-medium, $grid-gutter-medium);
+  @include make-grid-gutter-responsive-utility($abbreviation-phablet, $abbreviation-small, $abbreviation-large, $grid-gutter-large);
+  @include make-grid-gutter-responsive-utility($abbreviation-phablet, $abbreviation-small, clear, 0);
+}
+
+// Phablet: Medium
+@media (min-width: $screen-phablet-md) and (max-width: $screen-phablet-md-max) {
+  @include make-grid-gutter-responsive-utility($abbreviation-phablet, $abbreviation-medium, $abbreviation-small, $grid-gutter-small);
+  @include make-grid-gutter-responsive-utility($abbreviation-phablet, $abbreviation-medium, $abbreviation-medium, $grid-gutter-medium);
+  @include make-grid-gutter-responsive-utility($abbreviation-phablet, $abbreviation-medium, $abbreviation-large, $grid-gutter-large);
+  @include make-grid-gutter-responsive-utility($abbreviation-phablet, $abbreviation-medium, clear, 0);
+}
+
+// Phablet: Large
+@media (min-width: $screen-phablet-lg) and (max-width: $screen-phablet-lg-max) {
+  @include make-grid-gutter-responsive-utility($abbreviation-phablet, $abbreviation-large, $abbreviation-small, $grid-gutter-small);
+  @include make-grid-gutter-responsive-utility($abbreviation-phablet, $abbreviation-large, $abbreviation-medium, $grid-gutter-medium);
+  @include make-grid-gutter-responsive-utility($abbreviation-phablet, $abbreviation-large, $abbreviation-large, $grid-gutter-large);
+  @include make-grid-gutter-responsive-utility($abbreviation-phablet, $abbreviation-large, clear, 0);
+}
+
+// Tablet: Small
+@media (min-width: $screen-tablet-sm) and (max-width: $screen-tablet-sm-max) {
+  @include make-grid-gutter-responsive-utility($abbreviation-tablet, $abbreviation-small, $abbreviation-small, $grid-gutter-small);
+  @include make-grid-gutter-responsive-utility($abbreviation-tablet, $abbreviation-small, $abbreviation-medium, $grid-gutter-medium);
+  @include make-grid-gutter-responsive-utility($abbreviation-tablet, $abbreviation-small, $abbreviation-large, $grid-gutter-large);
+  @include make-grid-gutter-responsive-utility($abbreviation-tablet, $abbreviation-small, clear, 0);
+}
+
+// Tablet: Medium
+@media (min-width: $screen-tablet-md) and (max-width: $screen-tablet-md-max) {
+  @include make-grid-gutter-responsive-utility($abbreviation-tablet, $abbreviation-medium, $abbreviation-small, $grid-gutter-small);
+  @include make-grid-gutter-responsive-utility($abbreviation-tablet, $abbreviation-medium, $abbreviation-medium, $grid-gutter-medium);
+  @include make-grid-gutter-responsive-utility($abbreviation-tablet, $abbreviation-medium, $abbreviation-large, $grid-gutter-large);
+  @include make-grid-gutter-responsive-utility($abbreviation-tablet, $abbreviation-medium, clear, 0);
+}
+
+// Tablet: Large
+@media (min-width: $screen-tablet-lg) and (max-width: $screen-tablet-lg-max) {
+  @include make-grid-gutter-responsive-utility($abbreviation-tablet, $abbreviation-large, $abbreviation-small, $grid-gutter-small);
+  @include make-grid-gutter-responsive-utility($abbreviation-tablet, $abbreviation-large, $abbreviation-medium, $grid-gutter-medium);
+  @include make-grid-gutter-responsive-utility($abbreviation-tablet, $abbreviation-large, $abbreviation-large, $grid-gutter-large);
+  @include make-grid-gutter-responsive-utility($abbreviation-tablet, $abbreviation-large, clear, 0);
+}
+
+// Labtop: Small
+@media (min-width: $screen-labtop-sm) and (max-width: $screen-labtop-sm-max) {
+  @include make-grid-gutter-responsive-utility($abbreviation-labtop, $abbreviation-small, $abbreviation-small, $grid-gutter-small);
+  @include make-grid-gutter-responsive-utility($abbreviation-labtop, $abbreviation-small, $abbreviation-medium, $grid-gutter-medium);
+  @include make-grid-gutter-responsive-utility($abbreviation-labtop, $abbreviation-small, $abbreviation-large, $grid-gutter-large);
+  @include make-grid-gutter-responsive-utility($abbreviation-labtop, $abbreviation-small, clear, 0);
+}
+
+// Labtop: Medium
+@media (min-width: $screen-labtop-md) and (max-width: $screen-labtop-md-max) {
+  @include make-grid-gutter-responsive-utility($abbreviation-labtop, $abbreviation-medium, $abbreviation-small, $grid-gutter-small);
+  @include make-grid-gutter-responsive-utility($abbreviation-labtop, $abbreviation-medium, $abbreviation-medium, $grid-gutter-medium);
+  @include make-grid-gutter-responsive-utility($abbreviation-labtop, $abbreviation-medium, $abbreviation-large, $grid-gutter-large);
+  @include make-grid-gutter-responsive-utility($abbreviation-labtop, $abbreviation-medium, clear, 0);
+}
+
+// Labtop: Large
+@media (min-width: $screen-labtop-lg) and (max-width: $screen-labtop-lg-max) {
+  @include make-grid-gutter-responsive-utility($abbreviation-labtop, $abbreviation-large, $abbreviation-small, $grid-gutter-small);
+  @include make-grid-gutter-responsive-utility($abbreviation-labtop, $abbreviation-large, $abbreviation-medium, $grid-gutter-medium);
+  @include make-grid-gutter-responsive-utility($abbreviation-labtop, $abbreviation-large, $abbreviation-large, $grid-gutter-large);
+  @include make-grid-gutter-responsive-utility($abbreviation-labtop, $abbreviation-large, clear, 0);
+}
+
+// Desktop: Small
+@media (min-width: $screen-desktop-sm) and (max-width: $screen-desktop-sm-max) {
+  @include make-grid-gutter-responsive-utility($abbreviation-desktop, $abbreviation-small, $abbreviation-small, $grid-gutter-small);
+  @include make-grid-gutter-responsive-utility($abbreviation-desktop, $abbreviation-small, $abbreviation-medium, $grid-gutter-medium);
+  @include make-grid-gutter-responsive-utility($abbreviation-desktop, $abbreviation-small, $abbreviation-large, $grid-gutter-large);
+  @include make-grid-gutter-responsive-utility($abbreviation-desktop, $abbreviation-small, clear, 0);
+}
+
+// Desktop: Medium
+@media (min-width: $screen-desktop-md) and (max-width: $screen-desktop-md-max) {
+  @include make-grid-gutter-responsive-utility($abbreviation-desktop, $abbreviation-medium, $abbreviation-small, $grid-gutter-small);
+  @include make-grid-gutter-responsive-utility($abbreviation-desktop, $abbreviation-medium, $abbreviation-medium, $grid-gutter-medium);
+  @include make-grid-gutter-responsive-utility($abbreviation-desktop, $abbreviation-medium, $abbreviation-large, $grid-gutter-large);
+  @include make-grid-gutter-responsive-utility($abbreviation-desktop, $abbreviation-medium, clear, 0);
+}
+
+// Desktop: Large
+@media (min-width: $screen-desktop-lg) {
+  @include make-grid-gutter-responsive-utility($abbreviation-desktop, $abbreviation-large, $abbreviation-small, $grid-gutter-small);
+  @include make-grid-gutter-responsive-utility($abbreviation-desktop, $abbreviation-large, $abbreviation-medium, $grid-gutter-medium);
+  @include make-grid-gutter-responsive-utility($abbreviation-desktop, $abbreviation-large, $abbreviation-large, $grid-gutter-large);
+  @include make-grid-gutter-responsive-utility($abbreviation-desktop, $abbreviation-large, clear, 0);
+}
