@@ -186,6 +186,7 @@
     float: left;
     // Prevent columns from collapsing when empty
     min-height: 1px;
+    @include transition(all 0.3s ease 0s);
   }
 }
 
