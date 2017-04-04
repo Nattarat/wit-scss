@@ -409,7 +409,6 @@
 
 .grid > .grid-col {
   position: relative;
-  float: left;
   min-height: 1px;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;

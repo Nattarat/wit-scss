@@ -77,6 +77,7 @@
         // Width
         @if ($type == width) and ($index > 0) {
           &.#{$prefix-binding}-#{$class-screen}-#{$class-screen-size}-#{$index} {
+            float: left;
             width: percentage(($index / $columns));
           }
         }

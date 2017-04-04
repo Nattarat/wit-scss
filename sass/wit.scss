@@ -6,20 +6,20 @@
 // ==================================================================================================
 // //////////////////////////////////////////////////////////////////////////////////////////////////
 
-@charset 'utf-8'
+@charset 'utf-8';
 
 /*!
  * WIT v0.1.0
  */
 
-@import './shared/variables'
-@import './shared/mixins'
+@import './shared/variables';
+@import './shared/mixins';
 // Grid
-@import './grid/sass/src/grid-mixins'
-@import './grid/sass/src/grid-core'
-@import './grid/sass/src/grid-system-10'
-@import './grid/sass/src/grid-system-24'
+@import './grid/sass/src/grid-mixins';
+@import './grid/sass/src/grid-core';
+@import './grid/sass/src/grid-system-10';
+@import './grid/sass/src/grid-system-24';
 // Utilities
-@import './utilities/sass/src/responsive-mixins'
-@import './utilities/sass/src/responsive'
-@import './utilities/sass/src/helper'
+@import './utilities/sass/src/responsive-mixins';
+@import './utilities/sass/src/responsive';
+@import './utilities/sass/src/helper';

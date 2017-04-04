@@ -1,5 +1,5 @@
 # Files
-*.min.sass
+*.min.scss
 prepros.cfg
 .DS_Store
 debug.log
