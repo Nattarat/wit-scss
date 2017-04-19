@@ -410,9 +410,9 @@
 .grid > .grid-col {
   position: relative;
   min-height: 1px;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .grid[class*='bind-system'].bind-gutter-sm > .grid-col {
