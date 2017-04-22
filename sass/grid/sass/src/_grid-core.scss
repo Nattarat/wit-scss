@@ -24,6 +24,14 @@
     }
   }
 
+  @media (min-width: $screen-labtop-md) {
+    width: $screen-labtop-sm;
+
+    &.#{$prefix-binding}-fluid {
+      width: auto;
+    }
+  }
+
   @media (min-width: $screen-desktop-sm) {
     width: $screen-labtop-lg;
 
