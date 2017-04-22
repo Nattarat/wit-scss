@@ -17,7 +17,7 @@
 
   // Width
   @media (min-width: $screen-labtop-sm) {
-    width: $screen-labtop-sm;
+    width: $screen-tablet-lg;
 
     &.#{$prefix-binding}-fluid {
       width: auto;
